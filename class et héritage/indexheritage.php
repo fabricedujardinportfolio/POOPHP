@@ -91,7 +91,7 @@ echo "Name: " . $dog1->get_name();
 echo "<br>";
 echo "Color: " .  $dog1->get_color();
 echo "<br>";
-echo "tail: " . $dog1->get_tail();
+echo "height: " . $dog1->get_tail();
 echo "<br>";
 echo "breeds: " .  $dog1->get_breeds();
 
@@ -103,7 +103,7 @@ echo "Name: " . $dog2->get_name();
 echo "<br>";
 echo "Color: " .  $dog2->get_color();
 echo "<br>";
-echo "tail: " . $dog2->get_tail();
+echo "height: " . $dog2->get_tail();
 echo "<br>";
 echo "breeds: " .  $dog2->get_breeds();
 
@@ -117,7 +117,7 @@ $cat1->set_breeds('persan');
 $cat2->set_name('bobyCatata');
 $cat2->set_color('green');
 $cat2->set_tail('1m');
-$cat2->set_breeds('persan');
+$cat2->set_breeds('Siamois');
 
 echo "<br>";
 echo "<br>";
@@ -127,7 +127,7 @@ echo "Name: " . $cat1->get_name();
 echo "<br>";
 echo "Color: " .  $cat1->get_color();
 echo "<br>";
-echo "tail: " . $cat1->get_tail();
+echo "height: " . $cat1->get_tail();
 echo "<br>";
 echo "breeds: " .  $cat1->get_breeds();
 
@@ -139,7 +139,7 @@ echo "Name: " . $cat2->get_name();
 echo "<br>";
 echo "Color: " .  $cat2->get_color();
 echo "<br>";
-echo "tail: " . $cat2->get_tail();
+echo "height: " . $cat2->get_tail();
 echo "<br>";
 echo "breeds: " .  $cat2->get_breeds();
 ?>
