@@ -1,19 +1,9 @@
-<?php
-//Ne pas oublier d'ajouter le fichier posts.php
-require 'classes/posts.php';
-?>
+<?php require 'classes/posts.php';?>
 <?php require 'model/header.php';?>
 <div class="container">
     <?php
-    // $db = new Database();
-    //On ajoute un echo pour vérifier qu'un message s'affiche à l'écran
-    // echo $db->getConnection();
-    ?>
-    <?php
         $post = new Post();
         $posts = $post->getAllPosts();
-        // var_dump($posts);
-        
         while($post = $posts->fetch())
             {
             ?>
