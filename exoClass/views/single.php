@@ -40,7 +40,7 @@ require '../classes/posts.php';
             </div>
             </div>            
             <div class="col-6">
-                <a href="update.php?postId=<?= htmlspecialchars($post['id']);?>" class="text-decoration-none">
+                <a href="update.php?id=<?= htmlspecialchars($post['id']);?>" class="text-decoration-none">
                     <button class="btn btn-lg btn btn-primary btn-block mt-4 text-center" value="Update" type="submit" >Modifier ce post</button>
                 </a>
             </div>
