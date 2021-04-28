@@ -8,5 +8,14 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
 </head>
 <body class="container">
-    <h1>Mon blog</h1>
-    <p>En construction</p>
+<div class="container-fluid">
+  <header class="d-flex justify-content-center py-3">
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="http://localhost/POOPHP/exoClass/" class="nav-link active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Home</font></font></a></li>
+     <li class="nav-item"><a href="http://localhost/POOPHP/exoClass/views/create.php" class="nav-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Create</font></font></a></li>
+      <!--  <li class="nav-item"><a href="#" class="nav-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tarification</font></font></a></li>
+      <li class="nav-item"><a href="#" class="nav-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">FAQ</font></font></a></li>
+      <li class="nav-item"><a href="#" class="nav-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">À propos</font></font></a></li> -->
+    </ul>
+  </header>
+</div>

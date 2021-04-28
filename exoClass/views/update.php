@@ -4,39 +4,32 @@ require '../classes/posts.php';
 ?>
 <?php require '../model/header.php';?>
 <div class="container">
-    <?php
-    $post = new Post();
-    $posts = $post->getPost($_GET['postId']);
-    $post = $posts->fetch()
-    ?>
-    <div>
-        <p>Post ID : <?= htmlspecialchars($post['id']);?></p>
-        </h2 >Titre :<br> <?= htmlspecialchars($post['title']);?><br></h2>
-        <p class="pt-3">Content :<br><?= htmlspecialchars($post['content']);?></p>
-        <p>Users n° :<?= htmlspecialchars($post['Users_id']);?></p>
-        <p>Catégorie n° : <?= htmlspecialchars($post['Categories_id']);?></p>
-        <!-- <a href="views/update.php?postId=<?= htmlspecialchars($post['id']);?>"><button>UPDATE POST</button></a> -->
-    </div>
-            <br>
-    <?php
-    $posts->closeCursor();
-    ?>
-    <?php
-    $post = new Post();
-    $posts = $post->setUpdate($_GET['postId']);
-    $post = $posts->fetch()
-    ?>
-    <div class="col-md-12 mt-4">                
+    <?php  
+        
+        $poste = new Post();
+        if(isset($_POST['update'])) {
+            $poste->setUpdate();
+            echo "Modification apportée";
+        }   
+
+        $post = new Post();
+        $posts = $post->getPost($_GET['id']);
+        $post = $posts->fetch(); 
+
+     ?>
+    <div class="col-md-12 mt-4 pt-5">                
 	            <h2 class="text-uppercase">Modifier le post numéro : <?=$post['id']?></h2>
             </div>
-            <form class="mt-4" action="update.php?id=<?=$post['id']?>" method="post">
+            <form class="mt-4" method="post">
                 <div class="form-group">    
-                    <label for="id " class="mt-2" >ID</label>                
+                    <label for="id " class="mt-2" style="width:70px" >ID :</label>                
                     <input type="text" name="id"  value="<?=$post['id']?>" id="id" readonly ><br>
+                    <label for="userId " class="mt-2" style="width:70px" >User Id :</label>                
+                    <input type="text" name="userId"  value="<?= htmlspecialchars($post['Users_id']);?>" id="userId" readonly ><br>
                     <label for="title " class="mt-2" >Titre</label>            
                     <input class="form-control mb-2" type="text" placeholder="Titre" id="title" name="title" value="<?=$post['title']?>">
                     <label for="categories_id">Selectioner votre catégorie</label>
-                    <select class="form-control" id="categories_id" value="<?=$post['Categories_id']?>" name="categories_id" >
+                    <select class="form-control" id="categories_id"  name="categories_id" >
                         <option value="1">Tres-Zap</option>
                         <option value="2">Keylex</option>
                         <option value="3">Opela</option>
@@ -51,13 +44,17 @@ require '../classes/posts.php';
                     <textarea name="content" id="content" cols="30" rows="10" placeholder="<?=$post['content']?>" class="w-100 mt-1" ></textarea>
                     <div class="col-12">
                         <div class="row">
-                            <div class="col-6">
-                                <button class="btn btn-lg btn-facebook-g btn-block mt-4 text-center" value="Update" type="submit" >Modifier</button>
+                            <div class="col-4">
+                                <button class="btn btn-lg btn-primary btn-block mt-4 text-center"  name="update" type="submit" >Modifier</button>
                             </div>
                             
                         </div>
                     </div>
                 </div>
             </form>
+            
+    <?php
+    $posts->closeCursor();
+    ?>
 </div>
 <?php require '../model/footer.php';?>
