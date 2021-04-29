@@ -3,7 +3,7 @@
 class Databases
 {
 //Nos constantes
-const DB_HOST = 'mysql:host=localhost;dbname=blog_project;';
+const DB_HOST = 'mysql:host=localhost;dbname=fabrice;';
 const DB_USER = 'fabrice';
 const DB_PASS = 'fabrice2021';
 
